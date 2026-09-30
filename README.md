@@ -1,2 +1,2 @@
 # Hideaway
-A personal fork of stowaway made for testing and for my own tweaks
+A personal fork of stowaway made for testing my own tweaks
