@@ -1,5 +1,5 @@
 """
-app.py - desktop interface for Project Stowaway.
+app.py - desktop interface for Project away.
 
 Covers the same two jobs as options 1 and 2 in main.py:
   Hide     lock a message with a password, add repair bytes, hide it in a picture
@@ -9,7 +9,7 @@ Covers the same two jobs as options 1 and 2 in main.py:
 
 The page scrolls with the mouse wheel when it is taller than the window.
 
-Run it from the folder that holds the other Stowaway modules:
+Run it from the folder that holds the other HideAway v1.0 modules:
     python app.py
 
 It uses encrypt_text / decrypt_text (cryptocumrepair.py) and reveal_bytes
@@ -71,7 +71,7 @@ class UserError(Exception):
 
 
 def explain(exc):
-    """Turn an exception from the Stowaway modules into a plain sentence."""
+    """Turn an exception from the HideAway v1.0 modules into a plain sentence."""
     if isinstance(exc, UserError):
         return str(exc)
     text = str(exc)
@@ -210,7 +210,7 @@ class CompareDialog(tk.Toplevel):
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("Stowaway")
+        self.title("HideAway v1.0")
         self.geometry("780x760")
         self.minsize(700, 700)
         self.configure(bg=INK)
@@ -288,7 +288,7 @@ class App(tk.Tk):
         self._banner = ImageTk.PhotoImage(strip) if strip else None
         if self._banner:
             self.header.create_image(0, 0, image=self._banner, anchor="nw")
-        self.header.create_text(28, 44, text="Stowaway", anchor="w",
+        self.header.create_text(28, 44, text="HideAway v1.0", anchor="w",
                                 fill=TEXT, font=TITLE)
         self.header.create_text(28, 82, text=TAGLINE, anchor="w",
                                 fill=SOFT, font=BODY)
